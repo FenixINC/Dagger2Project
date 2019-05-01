@@ -6,9 +6,11 @@ import dagger.Provides
 @Module
 class StorageModule {
 
+    @DatabaseProd
     @Provides
     fun provideDatabaseHelper() = DataBaseUtils("database.db")
 
-//    @Provides
-//    fun provideDatabaseHelperTest() = DataBaseUtils("test.db")
+    @DatabaseTest
+    @Provides
+    fun provideDatabaseHelperTest() = DataBaseUtils("test.db")
 }

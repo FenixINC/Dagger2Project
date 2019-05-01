@@ -7,7 +7,12 @@ import javax.inject.Inject
 class MainActivity : AppCompatActivity() {
 
     @Inject
+    @field:DatabaseProd
     lateinit var mDataBaseUtils: DataBaseUtils
+
+    @Inject
+    @field:DatabaseTest
+    lateinit var mDataBaseUtilsTest: DataBaseUtils
 
     @Inject
     lateinit var mNetworkUtils: NetworkUtils
